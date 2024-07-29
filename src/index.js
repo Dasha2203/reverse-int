@@ -1,7 +1,5 @@
-module.exports = function reverse (n) {
-    let result = String(n).split("");
-    if (result[0] === '-') {
-        result.shift();
-    }
-  return Number(result.reverse().join(""))
+module.exports = function reverse(n) {
+  let number = n < 0 ? -n : n
+  
+  return Number(number.toString().split('').reverse().join(''))
 }
